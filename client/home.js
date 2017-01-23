@@ -10,9 +10,12 @@ class Home extends React.Component {
 	}
 
 	render() {
-		return <div>
+		return (
+			<div>
 			<h1>responsibilipuppy!</h1>
+			<img src="./intro_img.png" />
 		</div>
+		)
 	}
 }
 
