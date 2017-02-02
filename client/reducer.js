@@ -5,7 +5,7 @@ const initialState = {
 	image: './default.png',
 	points: 0,
 	days: 0,
-	maxDays: 30,
+	maxDays: 10,
 	hp: 100,
 	morale: 100
 }
@@ -26,7 +26,7 @@ const waterEventOpts = [['Mertle seems to be fairly tame at the moment', './defa
 				];
 
 const slapEventOpts = [["You're parents don't like you're attitude.  You must take care of Mertle for an extra day.", './angry_parents.png']
-					]
+					];
 
 
 
@@ -83,6 +83,15 @@ const reducer = (state, action) => {
 			state.morale -= maybeEvent[3];
 			state.hp -= maybeEvent[2];
 		}
+		if (state.days === state.maxDays) {
+			if (state.hp > 50) {
+				state.status = "You win!";
+				state.image = "./puppy.png";
+			} else {
+				state.status = "Mertle will have an extra big meal today";
+				state.image = "./mertle_is_fed.png";
+			}
+		}
 		return {...state} // equiv. of this.setState
 	}
 
@@ -97,6 +106,15 @@ const reducer = (state, action) => {
 			state.image = maybeEvent[1];
 			state.morale -= maybeEvent[3];
 			state.hp -= maybeEvent[2];
+		}
+		if (state.days === state.maxDays) {
+			if (state.hp > 50) {
+				state.status = "You win!";
+				state.image = "./puppy.png";
+			} else {
+				state.status = "Mertle will have an extra big meal today";
+				state.image = "./mertle_is_fed.png";
+			}
 		}
 		return {...state}
 	}
@@ -113,6 +131,15 @@ const reducer = (state, action) => {
 			state.maxDays += 1;
 			state.image = slapEventOpts[0][1];
 		}
+		if (state.days === state.maxDays) {
+			if (state.hp > 50) {
+				state.status = "You win!";
+				state.image = "./puppy.png";
+			} else {
+				state.status = "Mertle will have an extra big meal today";
+				state.image = "./mertle_is_fed.png";
+			}
+		}
 		return {...state}
 	}
 
@@ -121,6 +148,15 @@ const reducer = (state, action) => {
 		state.days += 1;
 		state.hp -= 1;
 	}
+	if (state.days === state.maxDays) {
+			if (state.hp > 50) {
+				state.status = "You win!";
+				state.image = "./puppy.png";
+			} else {
+				state.status = "Mertle will have an extra big meal today";
+				state.image = "./mertle_is_fed.png";
+			}
+		}
 	return state;
 }
 
