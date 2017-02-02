@@ -1,21 +1,35 @@
 import React from 'react';
+import Intro from './intro';
+import GameEngine from './gameEngine'
+
 
 class Home extends React.Component {
 
 	constructor() {
 		super()
 		this.state = {
-			day: 0
+			begin: false
 		}
+	}
+	renderGame() {
+		this.state.begin = true;
+		this.setState({begin: true});
 	}
 
 	render() {
-		return (
-			<div>
-			<h1>responsibilipuppy!</h1>
-			<img src="./intro_img.png" />
-		</div>
-		)
+		if (!this.state.begin) {
+			return (
+				<div>
+					<Intro renderGame={this.renderGame.bind(this)}/>
+				</div>
+			)
+		} else {
+			return (
+				<div>
+					<GameEngine />
+				</div>
+			)
+		}
 	}
 }
 
