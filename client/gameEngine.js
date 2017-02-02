@@ -11,15 +11,31 @@ class GameEngine extends React.Component {
 		this.props.dispatch(actions.feed_thing());
 	}
 
+	slap() {
+		this.props.dispatch(actions.slap_thing());
+	}
+
+	skip() {
+		this.props.dispatch(actions.skip_thing());
+	}
+
+	water() {
+		this.props.dispatch(actions.water_thing());
+	}
+
 	render() {
 		return (
 			<div>
 				<h1>new game engine</h1>
-				<img src={this.props.image}/>
 				<button onClick={() => this.feed()}>FEED</button>
-				<button>WATER</button>
-				<button>SLAP</button>
+				<button onClick={() => this.water()}>WATER</button>
+				<button onClick={() => this.slap()}>SLAP</button>
+				<button onClick={() => this.skip()}>SKIP</button>
 				<StatusBar />
+
+				<img src={this.props.image}/>
+
+
 			</div>
 		)
 	}
