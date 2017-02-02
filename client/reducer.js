@@ -1,13 +1,13 @@
 const initialState = {
-			mertleAnger: 0,
-			status: 'Mirtle seems to be fairly tame at the moment',
-			event: '',
-			image: 'default.png',
-			points: 0,
-			days: 0,
-			maxDays: 30,
-			hp: 100,
-			morale: 100
+	mertleAnger: 0,
+	status: 'Mirtle seems to be fairly tame at the moment',
+	event: '',
+	image: './default.png',
+	points: 0,
+	days: 0,
+	maxDays: 30,
+	hp: 100,
+	morale: 100
 }
 
 const reducer = (state, action) => {
@@ -23,7 +23,7 @@ const reducer = (state, action) => {
 	if (action.type === 'FEED_THING') {
 		console.log("FEED THING REDUCER");
 		state.days += 1;
-		return {...state, days: action.data}
+		return {...state}
 	}
 
 	if (action.type === 'SLAP_THING') {

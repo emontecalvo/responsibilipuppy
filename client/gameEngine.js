@@ -1,14 +1,13 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import * as actions from './actions';
+import StatusBar from './statusBar'
 
 class GameEngine extends React.Component {
 
 
-
-
-
 	feed() {
+		console.log("this props", this.props);
 		this.props.dispatch(actions.feed_thing());
 	}
 
@@ -16,9 +15,11 @@ class GameEngine extends React.Component {
 		return (
 			<div>
 				<h1>new game engine</h1>
+				<img src={this.props.image}/>
 				<button onClick={() => this.feed()}>FEED</button>
 				<button>WATER</button>
 				<button>SLAP</button>
+				<StatusBar />
 			</div>
 		)
 	}
