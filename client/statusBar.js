@@ -10,7 +10,6 @@ class StatusBar extends React.Component {
 			<div>
 				<div>
 					<p>Mertle Anger:{this.props.mertleAnger}</p>
-					<p>Status:{this.props.status}</p>
 					<p>Event:{this.props.event}</p>
 					<p>Image:{this.props.image}</p>
 					<p>Points:{this.props.points}</p>

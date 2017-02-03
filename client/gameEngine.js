@@ -26,15 +26,19 @@ class GameEngine extends React.Component {
 	render() {
 		return (
 			<div>
-				<h1>new game engine</h1>
-				<button onClick={() => this.feed()}>FEED</button>
-				<button onClick={() => this.water()}>WATER</button>
-				<button onClick={() => this.slap()}>SLAP</button>
-				<button onClick={() => this.skip()}>SKIP</button>
-				<StatusBar />
-
-				<img src={this.props.image}/>
-
+				<p>{this.props.status}</p>
+				<div className="status">
+					<StatusBar />
+				</div>
+				<div className="image">
+					<img src={this.props.image}/>
+				</div>
+				<div className="buttons">
+					<button onClick={() => this.feed()}>FEED</button>
+					<button onClick={() => this.water()}>WATER</button>
+					<button onClick={() => this.slap()}>SLAP</button>
+					<button onClick={() => this.skip()}>SKIP</button>
+				</div>
 
 			</div>
 		)

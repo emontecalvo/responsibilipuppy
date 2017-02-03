@@ -25,7 +25,7 @@ const waterEventOpts = [['Mertle seems to be fairly tame at the moment', './defa
 					['Mertle knocks you out and steals your pocket money.', './bully_trap.png', 0, 10]
 				];
 
-const slapEventOpts = [["You're parents don't like you're attitude.  You must take care of Mertle for an extra day.", './angry_parents.png']
+const slapEventOpts = [["Your parents don't like you're attitude.  You must take care of Mertle for an extra day.", './angry_parents.png']
 					];
 
 
