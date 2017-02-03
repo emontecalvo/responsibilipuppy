@@ -147,8 +147,7 @@ const reducer = (state, action) => {
 		console.log("skip called");
 		state.days += 1;
 		state.hp -= 1;
-	}
-	if (state.days === state.maxDays) {
+		if (state.days === state.maxDays) {
 			if (state.hp > 50) {
 				state.status = "You win!";
 				state.image = "./puppy.png";
@@ -157,6 +156,8 @@ const reducer = (state, action) => {
 				state.image = "./mertle_is_fed.png";
 			}
 		}
+	}
+
 	return state;
 }
 

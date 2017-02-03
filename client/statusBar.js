@@ -17,8 +17,15 @@ class StatusBar extends React.Component {
 					<p>maxDays:{this.props.maxDays}</p>
 					<p>hp:{this.props.hp}</p>
 					<p>morale:{this.props.morale}</p>
-
 				</div>
+				<div className="clock">
+				  <div className="hours"></div>
+				  <div className="minutes"></div>
+				  <div className="seconds"></div>
+				</div>
+
+
+
 			</div>
 		)
 	}
