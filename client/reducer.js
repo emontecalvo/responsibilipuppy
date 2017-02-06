@@ -34,9 +34,7 @@ const reducer = (state, action) => {
 
 
 	function randomFoodEvent() {
-		console.log("rand food called");
 		let randomEvent = foodEventOpts[Math.floor(Math.random() * foodEventOpts.length)];
-		console.log("random event is", randomEvent)
     	let coinToss = Math.random();
 
     	if (coinToss > 0.5) {
@@ -47,7 +45,6 @@ const reducer = (state, action) => {
 	};
 
 	function randomSlapEvent() {
-		console.log("rand slap called");
 		let coinToss = Math.random();
 		if (coinToss > 0.5) {
 			return 1
@@ -57,9 +54,7 @@ const reducer = (state, action) => {
 	}
 
 	function randomWaterEvent() {
-		console.log("rand water called");
 		let randomEvent = foodEventOpts[Math.floor(Math.random() * foodEventOpts.length)];
-		console.log("random event is", randomEvent)
     	let coinToss = Math.random();
 
     	if (coinToss > 0.5) {
@@ -73,11 +68,9 @@ const reducer = (state, action) => {
 	state = Object.assign({}, copyState);
 	
 	if (action.type === 'WATER_THING') {
-		console.log("WATER THING REDUCER");
 		state.image = './water_mertle.png';
 		state.days += 1;
 		let maybeEvent = randomWaterEvent();
-		console.log("maybeEvent is", maybeEvent);
 		if (maybeEvent !== -1) {
 			state.status = maybeEvent[0];
 			state.image = maybeEvent[1];
@@ -102,10 +95,8 @@ const reducer = (state, action) => {
 
 	if (action.type === 'FEED_THING') {
 		state.image = './feed_mertle.png';
-		console.log("FEED THING REDUCER");
 		state.days += 1;
 		let maybeEvent = randomFoodEvent();
-		console.log("maybeEvent is", maybeEvent);
 		if (maybeEvent !== -1) {
 			state.status = maybeEvent[0];
 			state.image = maybeEvent[1];
@@ -130,7 +121,6 @@ const reducer = (state, action) => {
 
 	if (action.type === 'SLAP_THING') {
 		state.image = './smack_mertle.png';
-		console.log("SLAP THING REDUCER");
 		state.days += 1;
 		state.morale += 10;
 		state.hp -= 10;
@@ -157,7 +147,6 @@ const reducer = (state, action) => {
 	}
 
 	if (action.type === 'SKIP_THING') {
-		console.log("skip called");
 		state.days += 1;
 		state.hp -= 1;
 		state.image = "./default.png";
@@ -173,6 +162,20 @@ const reducer = (state, action) => {
 				state.gameOver = true;
 			}
 		}
+	}
+
+	if (action.type === 'PLAY_AGAIN') {
+		console.log("PLAY AGAIN CALLED");
+		state.mertleAnger = 0;
+		state.status = 'Mertle seems to be fairly tame at the moment';
+		state.event = '';
+		state.image = './default.png';
+		state.point = 0;
+		state.days = 0;
+		state.maxDays = 10;
+		state.hp = 100;
+		state.morale = 100;
+		state.gameOver = false;
 	}
 
 	return state;

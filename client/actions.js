@@ -21,4 +21,8 @@ export const skip_thing = () => ({
 	type: 'SKIP_THING'
 })
 
+export const play_again = () => ({
+	type: 'PLAY_AGAIN'
+})
+
 
