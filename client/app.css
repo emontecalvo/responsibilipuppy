@@ -1,13 +1,15 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+
 .buttons {
-	width: 75%;
 	background-color: blue;
 	padding: 20px;
-	margin-left: 25%;
 }
 
 button {
-	margin: 20px;
-
+	margin: 10px;
 }
 
 .status {
@@ -15,7 +17,7 @@ button {
 	float: right;
 	text-align: left;
 	/*max-width: 25%;*/
-	/*margin-right: 5%;*/
+	margin-right: 20%;
 }
 
 .intro_img {
@@ -30,6 +32,18 @@ button {
     -moz-animation:spin 10s linear infinite;
     animation:spin 10s linear infinite;
 }
+
+.image img {
+	   border: 10px solid blue;
+}
+
+.status_line {
+	font-size: 1em;
+}
+
+
+
+
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

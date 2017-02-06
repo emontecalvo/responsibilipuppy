@@ -33,19 +33,22 @@ class GameEngine extends React.Component {
 		} else {
 			return (
 				<div>
-					<p>{this.props.status}</p>
+
+					<p className="status_line">{this.props.status}</p>
+
 					<div className="status">
 						<StatusBar />
+						<div className="buttons">
+							<p><button onClick={() => this.feed()}>FEED Mertle</button></p>
+							<p><button onClick={() => this.water()}>WATER Mertle</button></p>
+							<p><button onClick={() => this.slap()}>SLAP Mertle</button></p>
+							<p><button onClick={() => this.skip()}>SKIP</button></p>
+						</div>
 					</div>
 					<div className="image">
 						<img src={this.props.image}/>
 					</div>
-					<div className="buttons">
-						<button onClick={() => this.feed()}>FEED</button>
-						<button onClick={() => this.water()}>WATER</button>
-						<button onClick={() => this.slap()}>SLAP</button>
-						<button onClick={() => this.skip()}>SKIP</button>
-					</div>
+
 
 				</div>
 			);
