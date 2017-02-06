@@ -48,11 +48,8 @@ class GameOver extends React.Component {
 }
 
 export default connect((state, props) => ({
-	mertleAnger: state.mertleAnger,
 	status: state.status,
-	event: state.event,
 	image: state.image,
-	points: state.points,
 	days: state.days,
 	maxDays: state.maxDays,
 	hp: state.hp,

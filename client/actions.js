@@ -1,10 +1,4 @@
 
-// export const skip_thing = data => ({
-// 	type: 'SKIP_THING'
-// 	data
-// })
-
-
 export const water_thing = () => ({
 	type: 'WATER_THING'
 })

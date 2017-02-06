@@ -9,12 +9,15 @@ class StatusBar extends React.Component {
 		return (
 			<div>
 				<div>
-					<p>Mertle Anger: {this.props.mertleAnger}</p>
-					<p>Points: {this.props.points}</p>
-					<p>Days: {this.props.days}</p>
-					<p>maxDays: {this.props.maxDays}</p>
+					<p>Day: {this.props.days}</p>
+					<p>MaxDays: {this.props.maxDays}</p>
 					<p>Mertle's health: {this.props.hp}%</p>
-					<p>morale: {this.props.morale}%</p>
+					<p>Morale: {this.props.morale}%</p>
+					<br />
+					<p>morale </p>
+					<p>& Mertle's health</p>
+					<p> must be >=50% </p>
+					<p>to win!</p>
 				</div>
 			</div>
 		)
@@ -23,11 +26,8 @@ class StatusBar extends React.Component {
 }
 
 export default connect((state, props) => ({
-	mertleAnger: state.mertleAnger,
 	status: state.status,
-	event: state.event,
 	image: state.image,
-	points: state.points,
 	days: state.days,
 	maxDays: state.maxDays,
 	hp: state.hp,
