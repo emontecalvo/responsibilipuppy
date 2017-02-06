@@ -168,7 +168,7 @@ const reducer = (state, action) => {
 		state.status = 'Mertle seems to be fairly tame at the moment';
 		state.image = './default.png';
 		state.days = 0;
-		state.maxDays = 10;
+		state.maxDays = 30;
 		state.hp = 100;
 		state.morale = 100;
 		state.gameOver = false;
