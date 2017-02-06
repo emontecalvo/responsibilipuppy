@@ -38,7 +38,9 @@ button {
 }
 
 .status_line {
+	max-width: 50%;
 	font-size: 1em;
+	margin-left: 10%;
 }
 
 

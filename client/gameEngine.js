@@ -1,7 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import * as actions from './actions';
-import StatusBar from './statusBar'
+import StatusBar from './statusBar';
+import GameOver from './gameOver';
 
 class GameEngine extends React.Component {
 
@@ -27,7 +28,7 @@ class GameEngine extends React.Component {
 		if (this.props.gameOver) {
 			return (
 				<div>
-					<h3>GAME OVER!</h3>
+					<GameOver />
 				</div>
 			);
 		} else {

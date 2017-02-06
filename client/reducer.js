@@ -112,7 +112,7 @@ const reducer = (state, action) => {
 			state.morale -= maybeEvent[3];
 			state.hp -= maybeEvent[2];
 		} else {
-			state.status = "You feed Mertle without event while she hates you."
+			state.status = "You feed Mertle without injury while she hates you."
 		}
 		if (state.days === state.maxDays) {
 			if (state.hp > 50) {
