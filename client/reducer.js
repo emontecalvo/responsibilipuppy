@@ -7,7 +7,8 @@ const initialState = {
 	days: 0,
 	maxDays: 10,
 	hp: 100,
-	morale: 100
+	morale: 100,
+	gameOver: false
 }
 
 const foodEventOpts = [['Mertle seems to be fairly tame at the moment', './default.png', 0, 0],
@@ -87,9 +88,11 @@ const reducer = (state, action) => {
 			if (state.hp > 50) {
 				state.status = "You win!";
 				state.image = "./puppy.png";
+				state.gameOver = true;
 			} else {
 				state.status = "Mertle will have an extra big meal today";
 				state.image = "./mertle_is_fed.png";
+				state.gameOver = true;
 			}
 		}
 		return {...state} // equiv. of this.setState
@@ -111,9 +114,11 @@ const reducer = (state, action) => {
 			if (state.hp > 50) {
 				state.status = "You win!";
 				state.image = "./puppy.png";
+				state.gameOver = true;
 			} else {
 				state.status = "Mertle will have an extra big meal today";
 				state.image = "./mertle_is_fed.png";
+				state.gameOver = true;
 			}
 		}
 		return {...state}
@@ -135,9 +140,11 @@ const reducer = (state, action) => {
 			if (state.hp > 50) {
 				state.status = "You win!";
 				state.image = "./puppy.png";
+				state.gameOver = true;
 			} else {
 				state.status = "Mertle will have an extra big meal today";
 				state.image = "./mertle_is_fed.png";
+				state.gameOver = true;
 			}
 		}
 		return {...state}
@@ -151,9 +158,11 @@ const reducer = (state, action) => {
 			if (state.hp > 50) {
 				state.status = "You win!";
 				state.image = "./puppy.png";
+				state.gameOver = true;
 			} else {
 				state.status = "Mertle will have an extra big meal today";
 				state.image = "./mertle_is_fed.png";
+				state.gameOver = true;
 			}
 		}
 	}

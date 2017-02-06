@@ -18,14 +18,6 @@ class StatusBar extends React.Component {
 					<p>hp:{this.props.hp}</p>
 					<p>morale:{this.props.morale}</p>
 				</div>
-				<div className="clock">
-				  <div className="hours"></div>
-				  <div className="minutes"></div>
-				  <div className="seconds"></div>
-				</div>
-
-
-
 			</div>
 		)
 	}
@@ -41,5 +33,6 @@ export default connect((state, props) => ({
 	days: state.days,
 	maxDays: state.maxDays,
 	hp: state.hp,
-	morale: state.morale
+	morale: state.morale,
+	gameOver: state.gameOver
 }))(StatusBar);

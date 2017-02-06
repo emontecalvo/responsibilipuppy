@@ -8,7 +8,7 @@ const Intro = (renderGame) => {
 			 <div>
  				<h1>responsibilipuppy!</h1>
  				<button onClick={() => renderGame.renderGame()}>I wanna pupppppppy!</button>
- 				<img src="./intro_img.png" />
+ 				<img className="intro_img" src="./intro_img.png" />
 			</div>
 		)
 
