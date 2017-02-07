@@ -36,13 +36,13 @@ class GameEngine extends React.Component {
 					<p className="status_line">{this.props.status}</p>
 
 					<div className="status">
-						<StatusBar />
 						<div className="buttons">
 							<p><button onClick={() => this.feed()}>FEED Mertle</button></p>
 							<p><button onClick={() => this.water()}>WATER Mertle</button></p>
 							<p><button onClick={() => this.slap()}>SLAP Mertle</button></p>
 							<p><button onClick={() => this.skip()}>SKIP</button></p>
 						</div>
+						<StatusBar />
 					</div>
 					<div className="image">
 						<img src={this.props.image}/>

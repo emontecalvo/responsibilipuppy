@@ -13,11 +13,10 @@ class StatusBar extends React.Component {
 					<p>MaxDays: {this.props.maxDays}</p>
 					<p>Mertle's health: {this.props.hp}%</p>
 					<p>Morale: {this.props.morale}%</p>
-					<br />
-					<p>morale </p>
-					<p>& Mertle's health</p>
-					<p> must be >=50% </p>
-					<p>to win!</p>
+					<p className="rules">morale and </p>
+					<p className="rules">Mertle's health</p>
+					<p className="rules"> must be >=50% </p>
+					<p className="rules">to win!</p>
 				</div>
 			</div>
 		)
