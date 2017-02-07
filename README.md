@@ -1,11 +1,14 @@
 
-RESPONSIBILIPUPPY!
+#RESPONSIBILIPUPPY!#
 
 Two children desperately want a puppy, but in order to prove to their parents that they are indeed responsible enough to care for a dog, they must keep alive a Venus fly-trap for a month.
 
 Meet Mertle.
 
 She hates everything.
+
+![Alt text](./client/images/intro_img.png?raw=true "Responsibilipuppy")
+![Alt text](./client/images/feed_mertle.png?raw=true "Responsibilipuppy")
 
 
 
