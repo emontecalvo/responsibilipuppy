@@ -2,7 +2,7 @@ const initialState = {
 	status: 'Mertle seems to be fairly tame at the moment',
 	image: './default.png',
 	days: 0,
-	maxDays: 5,
+	maxDays: 30,
 	hp: 100,
 	morale: 100,
 	gameOver: false,
