@@ -72,6 +72,81 @@ button:hover {
 
 
 
+
+/* timer */
+.timer {
+  margin-top: 20px;
+  margin-left: 5px;
+  position: relative;
+  width: 50px;
+  height: 80px;
+  overflow: visible;
+}
+
+.glass {
+  position: absolute;
+  width: 0; height: 0;
+  border-top: solid #009688 80px;
+  border-left: solid transparent 50px;
+  border-right: solid transparent 50px;
+}
+
+.glass::after {
+  content: "";
+  position: absolute;
+  left: -50px; bottom: -80px;
+  border-bottom: solid #009688 80px;
+  border-left: solid transparent 50px;
+  border-right: solid transparent 50px;
+}
+
+.glass::before {
+  z-index: 1;
+  content: "";
+  position: absolute;
+  top: -10px; left: -6px;
+  width: 12px; height: 20px;
+  background-color: black;
+  border-radius: 3px;
+}
+
+.top-sand {
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: solid papayawhip 3px;
+  border-left: solid transparent 2px;
+  border-right: solid transparent 2px;
+  right: -2px;
+  margin-left: auto; margin-right: auto;
+  position: absolute; bottom: 0;
+  animation: drain 10s ease-in;
+}  
+
+.bottom-sand {
+  position: absolute;
+  bottom: -80px;
+  border-bottom: solid papayawhip 80px;
+  border-left: solid transparent 40px;
+  border-right: solid transparent 40px;
+  right: -40px;
+  animation: fill 10s ease-out;
+}
+
+.sand {
+  position: absolute;
+  width: 0px; height: 80px;
+  left: 50px; top: 80px;
+  border-left: dotted papayawhip 3px;
+  opacity: 0;
+  animation: shift 0.1s linear infinite;
+}
+
+/* timer end*/
+
+
+
 @media screen and (max-width: 800px) {
   .image img {
   	max-width: 50%;
@@ -133,10 +208,67 @@ button:hover {
     margin-left: 5px;
     margin-top: -80px;
 	}
+
+  .decision {
+    width: 100%;
+  }
 }
 
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 }
+
+
+/*timer keyframes*/
+
+@keyframes shift {
+  0% {
+    top: 80px;
+  }
+  100% {
+    top: 80px;
+    height: 80px;
+  }
+}
+
+@keyframes fill {
+  0% { 
+    border-right: solid transparent 2px;
+    border-bottom: solid papayawhip 2px;
+    border-left: solid transparent 2px;
+
+    right: -2px;
+  }
+  100% {
+    border-right: solid transparent 35px;
+    border-bottom: solid papayawhip 80px;
+    border-left: solid transparent 35px;
+
+    right: -35px;
+  }
+}
+
+@keyframes drain {
+  0% { 
+    border-top: solid papayawhip 80px;
+    border-right: solid transparent 35px;
+    border-left: solid transparent 35px;
+
+    right: -35px;
+  }
+  100% {
+    border-top: solid papayawhip 3px;
+    border-right: solid transparent 2px;
+    border-left: solid transparent 2px;
+    right: -2px;
+  }
+}
+/* timer keyframes end*/
+
+
+
+
+
+
 

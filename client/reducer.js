@@ -2,10 +2,11 @@ const initialState = {
 	status: 'Mertle seems to be fairly tame at the moment',
 	image: './default.png',
 	days: 0,
-	maxDays: 30,
+	maxDays: 5,
 	hp: 100,
 	morale: 100,
-	gameOver: false
+	gameOver: false,
+	timer: true
 }
 
 const foodEventOpts = [['Mertle seems to be fairly tame at the moment', './default.png', 10, 0],
@@ -61,6 +62,14 @@ const reducer = (state, action) => {
     	}
 	};
 
+	function myDelay(time) {
+	    var time1 = new Date();
+	    var time2 = new Date();
+	    while (time2.valueOf() < time1.valueOf() + time) {
+	      time2 = new Date();
+	    }
+  	}
+
 	let copyState = state || initialState;
 	state = Object.assign({}, copyState);
 	
@@ -102,7 +111,7 @@ const reducer = (state, action) => {
 			state.hp += maybeEvent[2];
 		} else {
 			state.status = "You feed Mertle without injury while she hates you."
-			state.status += 10;
+			state.hp += 10;
 		}
 		if (state.days >= state.maxDays) {
 			if (state.hp > 50 && state.morale > 50) {
@@ -164,7 +173,6 @@ const reducer = (state, action) => {
 	}
 
 	if (action.type === 'PLAY_AGAIN') {
-		console.log("PLAY AGAIN CALLED");
 		state.status = 'Mertle seems to be fairly tame at the moment';
 		state.image = './default.png';
 		state.days = 0;
@@ -172,6 +180,13 @@ const reducer = (state, action) => {
 		state.hp = 100;
 		state.morale = 100;
 		state.gameOver = false;
+		state.timer = true;
+	}
+
+	if (action.type === 'SHOW_TIMER') {
+		myDelay(2000);
+		state.timer = false;
+		return {...state}
 	}
 
 	return state;

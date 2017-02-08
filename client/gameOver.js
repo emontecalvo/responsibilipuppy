@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import * as actions from './actions';
 import GameEngine from './gameEngine';
+import Timer from './timer';
 
 class GameOver extends React.Component {
 
@@ -9,23 +10,18 @@ class GameOver extends React.Component {
 		this.props.dispatch(actions.play_again());
 	}
 
-	render() {
 
-		return (
-			<div>
-				<h3>Game Over!</h3>
-				<p className="status_line">{this.props.status}</p>
-				<button onClick={() => this.playAgain()}>Play Again?</button>
-				<div className="image">
-					<img src={this.props.image}/>
+
+	render() {
+		if (this.props.gameOver && this.props.timer) {
+			return (
+				<div>
+					<h3>Game Over!</h3>
+					<Timer />
+
 				</div>
-
-			</div>
-		);
-	}
-
-	render() {
-		if (this.props.gameOver) {
+			);
+		}  else if (this.props.gameOver && !this.props.timer) {
 			return (
 				<div>
 					<h3>Game Over!</h3>
@@ -54,5 +50,6 @@ export default connect((state, props) => ({
 	maxDays: state.maxDays,
 	hp: state.hp,
 	morale: state.morale,
-	gameOver: state.gameOver
+	gameOver: state.gameOver,
+	timer: state.timer
 }))(GameOver);

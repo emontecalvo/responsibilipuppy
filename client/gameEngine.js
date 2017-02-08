@@ -63,5 +63,6 @@ export default connect((state, props) => ({
 	maxDays: state.maxDays,
 	hp: state.hp,
 	morale: state.morale,
-	gameOver: state.gameOver
+	gameOver: state.gameOver,
+	timer: state.timer
 }))(GameEngine);

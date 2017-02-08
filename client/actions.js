@@ -19,4 +19,7 @@ export const play_again = () => ({
 	type: 'PLAY_AGAIN'
 })
 
+export const show_timer = () => ({
+	type: 'SHOW_TIMER'
+})
 
