@@ -16,7 +16,6 @@ class GameOver extends React.Component {
 		if (this.props.gameOver && this.props.timer) {
 			return (
 				<div>
-					<h3>Game Over!</h3>
 					<Timer />
 
 				</div>

@@ -63,15 +63,12 @@ button:hover {
 .status_line {
 	max-width: 50%;
 	font-size: 1em;
-	margin-left: 10%;
+/*	margin-left: 10%;*/
 }
 
 .setup_img {
 	width: 70%;
 }
-
-
-
 
 /* timer */
 .timer {
@@ -121,7 +118,7 @@ button:hover {
   right: -2px;
   margin-left: auto; margin-right: auto;
   position: absolute; bottom: 0;
-  animation: drain 10s ease-in;
+  animation: drainsand 10s ease-in;
 }  
 
 .bottom-sand {
@@ -131,7 +128,7 @@ button:hover {
   border-left: solid transparent 40px;
   border-right: solid transparent 40px;
   right: -40px;
-  animation: fill 10s ease-out;
+  animation: fillup 10s ease-out;
 }
 
 .sand {
@@ -203,8 +200,8 @@ button:hover {
   }
 
   .intro_img {
-	background-color: blue;
-	width: 50%;
+	  background-color: blue;
+	  width: 50%;
     margin-left: 5px;
     margin-top: -80px;
 	}
@@ -232,7 +229,7 @@ button:hover {
   }
 }
 
-@keyframes fill {
+@keyframes fillup {
   0% { 
     border-right: solid transparent 2px;
     border-bottom: solid papayawhip 2px;
@@ -249,7 +246,7 @@ button:hover {
   }
 }
 
-@keyframes drain {
+@keyframes drainsand {
   0% { 
     border-top: solid papayawhip 80px;
     border-right: solid transparent 35px;
