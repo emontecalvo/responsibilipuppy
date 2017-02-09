@@ -1,38 +1,38 @@
 body {
-	font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .buttons {
-	padding: 10px;
+  padding: 10px;
 }
 
 .buttons button {
-	width: 100%;
-	border: 3px solid #009688;
-	background-color: papayawhip;
+  width: 100%;
+  border: 3px solid #009688;
+  background-color: papayawhip;
 }
 
 button {
-	background-color: #B2DFDB;
-	border-radius: 8px;
-	padding: 10px;
-	width: 25%;
-	font-size: 1em;
-	cursor: pointer;
-  	box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
-  	outline: 1px solid;
-  	outline-color: rgba(255, 255, 255, .5);
-  	transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+  background-color: #B2DFDB;
+  border-radius: 8px;
+  padding: 10px;
+  width: 25%;
+  font-size: 1em;
+  cursor: pointer;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    outline: 1px solid;
+    outline-color: rgba(255, 255, 255, .5);
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
 } 
 
 button:hover {
-	background-color: #009688; 
-	color: white;
-  	border: 1px solid;
-  	box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
-  	outline-color: rgba(100, 200, 70, 0);
-  	outline-offset: 15px;
-  	text-shadow: 1px 1px 2px #427388; 
+  background-color: #009688; 
+  color: white;
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+    outline-color: rgba(100, 200, 70, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388; 
 }
 
 .rules {
@@ -41,16 +41,16 @@ button:hover {
 
 .status {
   font-size: 12px;
-	background-color: #B2DFDB;
+  background-color: #B2DFDB;
   margin-top: -70px;
-	float: right;
-	text-align: center;
-	margin-right: 10%;
-	border-radius: 10px;
+  float: right;
+  text-align: center;
+  margin-right: 10%;
+  border-radius: 10px;
 }
 
 .intro_img {
-	  width: 40%;
+    width: 40%;
     position: absolute;
     top: 40%;
     left: 30%;
@@ -61,152 +61,165 @@ button:hover {
 }
 
 .status_line {
-	max-width: 50%;
-	font-size: 1em;
+  max-width: 50%;
+  font-size: 1em;
 }
 
 .setup_img {
-	width: 70%;
+  width: 70%;
 }
 
-/* timer */
-.timer {
-  margin-top: 20px;
-  margin-left: 5px;
-  position: relative;
-  width: 50px;
-  height: 80px;
-  overflow: visible;
+
+.decision {
+    margin-left: 5%;
 }
 
-.glass {
-  position: absolute;
-  width: 0; height: 0;
-  border-top: solid #009688 80px;
-  border-left: solid transparent 50px;
-  border-right: solid transparent 50px;
+
+
+/*   SVG */
+
+.theSVG {
+  margin: 1%;
 }
 
-.glass::after {
-  content: "";
-  position: absolute;
-  left: -50px; bottom: -80px;
-  border-bottom: solid #009688 80px;
-  border-left: solid transparent 50px;
-  border-right: solid transparent 50px;
+svg {
+  max-height: 150px;
 }
 
-.glass::before {
-  z-index: 1;
-  content: "";
-  position: absolute;
-  top: -10px; left: -6px;
-  width: 12px; height: 20px;
-  background-color: black;
-  border-radius: 3px;
+.topU{
+  fill: papayawhip;
+  stroke: black;
+  stroke-width: 3px;
+  animation: 3s empty infinite alternate;
+  animation-delay: 2s;
+  transform-origin: 50% 50%;
 }
 
-.top-sand {
-  display: block;
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-top: solid papayawhip 3px;
-  border-left: solid transparent 2px;
-  border-right: solid transparent 2px;
-  right: -2px;
-  margin-left: auto; margin-right: auto;
-  position: absolute; bottom: 0;
-  animation: drainsand 10s ease-in;
-}  
+.middleU {
+  fill: #00796B;
+  stroke: black;
+  stroke-width: 3px;
 
-.bottom-sand {
-  position: absolute;
-  bottom: -80px;
-  border-bottom: solid papayawhip 80px;
-  border-left: solid transparent 40px;
-  border-right: solid transparent 40px;
-  right: -40px;
-  animation: fillup 10s ease-out;
+  animation: 4s empty infinite alternate;
+  animation-delay: 1s;   
+  transform-origin: 50% 50%;
 }
 
-.sand {
-  position: absolute;
-  width: 0px; height: 80px;
-  left: 50px; top: 80px;
-  border-left: dotted papayawhip 3px;
-  opacity: 0;
-  animation: shift 0.1s linear infinite;
+.bottomU{
+  fill: #B2DFDB;
+  stroke: black;
+  stroke-width: 3px;
 }
 
-/* timer end*/
+.topL{
+  fill: papayawhip;
+  stroke: black;
+  stroke-width: 3px;
+  animation: 3s fill infinite alternate;
+  animation-delay: 2s;
+  transform-origin: 50% 50%;
+
+}
+
+.middleL{
+  fill: #00796B;
+  stroke: black;
+  stroke-width: 3px;
+  animation: 4s fill infinite alternate;
+  animation-delay: 1s;
+  transform-origin: 50% 50%;
+
+}
+
+.bottomL{
+  stroke: black;
+  fill: #B2DFDB;
+  stroke-width: 3px;
+}
+
+
+
+/*   SVG END */
 
 
 
 @media screen and (max-width: 800px) {
   .image img {
-  	max-width: 50%;
+    max-width: 50%;
   }
   .status {
-  	margin-right: 10%;
+    margin-right: 10%;
   }
 }
 
 @media screen and (max-width: 620px) {
   .image img {
-  	max-width: 50%;
+    max-width: 50%;
   }
   .status {
-  	margin-right: 5%;
-  	max-width: 150px;
-  	font-size: 0.8em;
+    margin-right: 5%;
+    max-width: 150px;
+    font-size: 0.8em;
   }
   button {
-		width: 50%;
-		font-size: 0.7em;
-	}
+    width: 50%;
+    font-size: 0.7em;
+  }
 }
 
 @media screen and (max-width: 500px) {
 
   .image img {
-  	max-width: 50%;
+    max-width: 50%;
   }
   .status {
-  	margin-right: 0;
-  	max-width: 100px;
-  	font-size: 0.7em;
+    margin-right: 0;
+    max-width: 100px;
+    font-size: 0.7em;
+  }
+
+  .decision {
+    margin-left: 0.5%;
   }
 }
 
 @media screen and (max-width: 320px) {
   .image img {
-  	max-width: 80%;
-  	float: top;
+    max-width: 80%;
+    float: top;
   }
   .image {
-  	position: absolute;
+    position: absolute;
   }
   .status {
-  	position: absolute;
-  	margin-top: 80%;
-  	margin-right: 0;
-  	max-width: 100px;
-  	font-size: 0.7em;
+    position: absolute;
+    margin-top: 80%;
+    margin-right: 0;
+    max-width: 100px;
+    font-size: 0.7em;
   }
   h1 {
-  	font-size: 0.7em;
+    font-size: 0.7em;
   }
 
   .intro_img {
-	  background-color: blue;
-	  width: 50%;
+    background-color: blue;
+    width: 50%;
     margin-left: 5px;
     margin-top: -80px;
-	}
+  }
 
   .decision {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 200px) {
+    svg {
+    max-height: 100px;
+    position: absolute;
+    left: 0;
+    left: -40%;
   }
 }
 
@@ -216,17 +229,9 @@ button:hover {
 }
 
 
-/*timer keyframes*/
 
-@keyframes shift {
-  0% {
-    top: 80px;
-  }
-  100% {
-    top: 80px;
-    height: 80px;
-  }
-}
+
+
 
 @keyframes fillup {
   0% { 
@@ -245,25 +250,30 @@ button:hover {
   }
 }
 
-@keyframes drainsand {
-  0% { 
-    border-top: solid papayawhip 80px;
-    border-right: solid transparent 35px;
-    border-left: solid transparent 35px;
 
-    right: -35px;
+
+
+
+
+@keyframes fill{
+  from {
+    transform: scale(0.5);
+    opacity: 0;
   }
-  100% {
-    border-top: solid papayawhip 3px;
-    border-right: solid transparent 2px;
-    border-left: solid transparent 2px;
-    right: -2px;
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
 }
-/* timer keyframes end*/
 
-
-
+@keyframes empty{
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 
 
 
