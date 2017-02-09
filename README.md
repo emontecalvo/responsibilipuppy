@@ -54,6 +54,7 @@ She hates everything.
 ###Functionality and Technology
 * This app was design to be responsive across a wide range of browser sizes, however, due to the nature of an image-based game, the game play is best on a standard desktop window or bigger.
 * All artwork is original, built primarilly using Sketch.
+* The ending animation is done with SVG animation in CSS.
 * There is a simple server file, allowing the option of easilly adding some express routes for later.  At this time it is not in use.
 * This is a front-end React project, and it is a React-with-Redux project, so the code requiring state updates, actions and changes are handled with the action.js and reducer.js files, instead of passing them down through the React components (in fact, for a good comparison between React-only code and React-with-Redux, please feel free to check out my project comparing the two:  pure React: https://github.com/emontecalvo/myBlog, React-with-Redux: https://github.com/emontecalvo/myBlogRedux).
 
