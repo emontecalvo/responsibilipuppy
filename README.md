@@ -28,7 +28,7 @@ She hates everything.
 * Go to the localhost 8080 on your web browser and you should see *Responsibilipuppy* running!
 
 ### Live Site
-* coming soon
+* https://emontecalvo.github.io/responsibilipuppy/
 
 ### Gameplay
 * The object of the game is to keep both Mertle the Venus Fly-trap's health over 50% and your own morale over 50% in order to prove to your parents that you are responsibile enough to get a puppy.
@@ -47,6 +47,7 @@ She hates everything.
 * HTML
 * CSS
 * Webpack
+* SVG Animation
 
 ###Origin
 * A rough version of this was built awhile ago, using only React.  The game demo brought such positive feedback that I really wanted to refactor it with Redux, create more original artwork for it and host it live for non-developers to be able to play, in addition to creating a smoother gameplay experience for the user.
