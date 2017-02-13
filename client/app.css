@@ -132,8 +132,8 @@ svg {
 /*   SVG END */
 
 .svgstart {
-  position: absolute;
-  top: 20%;
+  margin: 20px;
+  top: 10px;
   left: 5%;
 }
 
