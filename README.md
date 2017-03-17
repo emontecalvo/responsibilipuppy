@@ -1,5 +1,5 @@
 
-#RESPONSIBILIPUPPY!#
+# RESPONSIBILIPUPPY!
 
 Two children desperately want a puppy, but in order to prove to their parents that they are indeed responsible enough to care for a dog, they must keep alive a Venus fly-trap for a month.
 
@@ -11,7 +11,7 @@ She hates everything.
 ![Alt text](./client/images/mertle_rd.png?raw=true "Responsibilipuppy")
 
 
-###Setup Instructions:
+### Setup Instructions:
 
 * To use this application, simply clone or download the repository.
 
@@ -40,7 +40,7 @@ She hates everything.
 
 
 
-###Technologies (Quick Overview)
+### Technologies (Quick Overview)
 * Node.js
 * React
 * Redux
@@ -49,10 +49,10 @@ She hates everything.
 * Webpack
 * SVG Animation
 
-###Origin
+### Origin
 * A rough version of this was built awhile ago, using only React.  The game demo brought such positive feedback that I really wanted to refactor it with Redux, create more original artwork for it and host it live for non-developers to be able to play, in addition to creating a smoother gameplay experience for the user.
 
-###Functionality and Technology
+### Functionality and Technology
 * This app was design to be responsive across a wide range of browser sizes, however, due to the nature of an image-based game, the game play is best on a standard desktop window or bigger.
 * All artwork is original, built primarilly using Sketch.
 * The ending animation is done with SVG animation in CSS.
