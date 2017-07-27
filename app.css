@@ -82,7 +82,7 @@ svg {
   stroke-width: 3px;
   animation: 3s empty infinite alternate;
   animation-delay: 2s;
-  transform-origin: 50% 50%;
+/*  transform-origin: 50% 50%;*/
 }
 
 .middleU {
@@ -92,7 +92,7 @@ svg {
 
   animation: 4s empty infinite alternate;
   animation-delay: 1s;   
-  transform-origin: 50% 50%;
+/*  transform-origin: 50% 50%;*/
 }
 
 .bottomU{
